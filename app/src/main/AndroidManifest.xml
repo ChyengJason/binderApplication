@@ -10,16 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".BookActivity">
+        </activity>
+
+        <service
+            android:name=".MyBookManagerService"
+            android:process=":remote2"></service>
+
+        <activity android:name=".binderpool.BinderPoolTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
-            android:name=".MyBookManagerService"
-            android:process=":remote2">
+            android:name=".binderpool.BinderPoolService"
+            android:process=":remote3">
         </service>
+
     </application>
 
 </manifest>
